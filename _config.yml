@@ -99,5 +99,7 @@ theme: hexo-theme-next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  repo: 'git@e.coding.net:liuzhengri/blog.git'
+  repo:
+    github: git@github.com:lanky228/lanky228.github.io.git,master
+    coding: git@e.coding.net:liuzhengri/blog.git,master
   branch: 'master'
