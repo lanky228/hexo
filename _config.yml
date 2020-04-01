@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
+title: Lanky的博客
+subtitle: '生活 学习'
+description: '计算机 社会 物理 游戏'
+keywords: Lanky,博客,生活,学习,计算机,社会,物理,游戏
+author: Lanky
+language: zh-Hans
 timezone: ''
 
 # URL
@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -116,3 +116,9 @@ sitemap:
   path: sitemap.xml
 baidusitemap: 
   path: baidusitemap.xml
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
