@@ -8,7 +8,7 @@ subtitle: '生活 学习'
 description: '计算机 社会 物理 游戏'
 keywords: Lanky,博客,生活,学习,计算机,社会,物理,游戏
 author: Lanky
-language: zh-Hans
+language: zh-CN
 timezone: ''
 
 # URL
@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-next
+theme: next
 
 baidu_url_submit:
   count: 10               # 提交最新的多少个链接
