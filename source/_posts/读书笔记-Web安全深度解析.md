@@ -5,21 +5,21 @@ tags: 计算机
 categories: 学习
 ---
 
-# Web安全深度解析
+# Web 安全深度解析
 
-## HTTP代理工具
+## HTTP 代理工具
 
 - Burp Suite Proxy
 - Fiddler
 - WinsockExpert
 
-## 查询引擎site命令
+## 搜索引擎 site 命令
 
 - site：域名
 - intext：正文关键字
 - intitle：标题关键字
 - info：基本信息
-- inurl：url关键字
+- inurl：URL 关键字
 - filetype：文件类型
 
 ## 信息探测工具
@@ -33,11 +33,11 @@ categories: 学习
 - AWVS
 - AppScan
 
-## SQL注入漏洞
+## SQL 注入漏洞
 
 ### 原理
 
-用户输入被SQL执行器执行
+用户输入被 SQL 执行器执行。
 
 ### 分类
 
@@ -53,7 +53,7 @@ categories: 学习
 ### 防御措施
 
 - 数据类型校验
-- 特殊字符转意
+- 特殊字符转义
 - 预编译语句
 - 框架技术
 - 存储过程
@@ -62,21 +62,21 @@ categories: 学习
 
 ### 原理
 
-- IIS解析漏洞
-- Apache解析漏洞
-- PHP CGI解析漏洞
+- IIS 解析漏洞
+- Apache 解析漏洞
+- PHP CGI 解析漏洞
 
 ### 防御措施
 
 - 客户端检测
 
-绕过方法：FireBug、中间人攻击
+绕过方法：FireBug、中间人攻击。
 
 - 服务端检测
 
-方法：白名单和黑名单校验、MIME校验、目录校验
+方法：白名单和黑名单校验、MIME 校验、目录校验。
 
-绕过方法：截断上传攻击
+绕过方法：截断上传攻击。
 
 ### 文本编辑器上传漏洞
 
@@ -84,21 +84,21 @@ categories: 学习
 - 黑名单策略错误
 - 任意文件上传漏洞
 
-原因：目录过滤不严、文件未重命名
+原因：目录过滤不严、文件未重命名。
 
-解决措施：接受文件保存在临时路径、白名单校验拓展名、文件重命名
+解决措施：接受文件保存在临时路径、白名单校验扩展名、文件重命名。
 
-## XSS跨域脚本漏洞
+## XSS 跨站脚本漏洞
 
 ### 原理
 
-网页嵌入恶意脚本
+网页嵌入恶意脚本。
 
 ### 分类
 
 - 反射型
 - 存储型
-- DOM
+- DOM 型
 
 ### 检查工具
 
@@ -106,7 +106,7 @@ categories: 学习
 - AWVS
 - Burp Suite
 
-### XSS危害
+### XSS 危害
 
 - XSS 会话劫持
 - XSS Framework
@@ -124,25 +124,25 @@ categories: 学习
 
 - 模型漏洞
 
-PHP、JAVA
+PHP、Java。
 
 - 框架漏洞
 
-Struct2、ThinkPHP
+Struts2、ThinkPHP。
 
 ### 防御措施
 
 - 避免使用系统执行命令
 - 参数校验转义
 - 函数白名单
-- PHP中，无法控制的函数不使用
+- PHP 中无法控制的函数不使用
 
 ## 文件包含漏洞
 
 ### 类型
 
-- PHP包含
-- JSP包含
+- PHP 包含
+- JSP 包含
 
 ### 防御措施
 
@@ -156,20 +156,20 @@ Struct2、ThinkPHP
 - CSRF
 - 逻辑错误漏洞
 
-绕过授权验证、密码找回逻辑漏洞、支付逻辑漏洞、指定账户恶意攻击
+绕过授权验证、密码找回逻辑漏洞、支付逻辑漏洞、指定账户恶意攻击。
 
 - 代码注入
 
-XML注入、XPath注入、JSON注入、HTTP Parameter Pollution
+XML 注入、XPath 注入、JSON 注入、HTTP Parameter Pollution。
 
-- URL跳转与钓鱼
-- WebServer远程部署
+- URL 跳转与钓鱼
+- WebServer 远程部署
 
-Tomcat、Jboss、WebLogic
+Tomcat、Jboss、WebLogic。
 
 ## 常见防御措施
 
-- 0day漏洞修复
+- 0day 漏洞修复
 - 前后台安全框架
 - 三方件、加密算法安全
 - 数据库安全
@@ -181,11 +181,11 @@ Tomcat、Jboss、WebLogic
 
 ### 旁注攻击
 
-- IP逆向查询
-- SQL跨库查询
+- IP 逆向查询
+- SQL 跨库查询
 - 目录越权
 
-防御措施：CDN
+防御措施：CDN。
 
 ## 提权
 
@@ -195,10 +195,10 @@ Tomcat、Jboss、WebLogic
 
 ### 攻击方法
 
-- 3389端口
+- 3389 端口
 - 端口转发
 - 启动项提权
-- DLL劫持
+- DLL 劫持
 - 提权后门
 
 ### 防御措施
@@ -209,7 +209,7 @@ Tomcat、Jboss、WebLogic
 - 删除不安全组件
 - 安装安全配置软件
 
-## ARP欺骗攻击
+## ARP 欺骗攻击
 
 ### 检查工具
 
@@ -220,7 +220,7 @@ Tomcat、Jboss、WebLogic
 ### 防御措施
 
 - 静态绑定
-- ARP防火墙
+- ARP 防火墙
 
 ## 社会工程学
 
