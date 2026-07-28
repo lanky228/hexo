@@ -1,0 +1,65 @@
+# Hexo 博客项目 Agent 指南
+
+## 项目信息
+
+- **源码仓库**: `lanky228/hexo` (GitHub, `master` 分支)
+- **Pages 部署**: `lanky228.github.io`
+- **文章目录**: `source/_posts/`
+- **Git 用户**: `liuzhengri` / `1289206629@qq.com`
+
+## 强制规则：所有文章必须适合手机阅读
+
+**每篇发布到博客的文章都必须符合以下手机阅读友好规范，没有例外：**
+
+### 排版规则
+- 段落不超过 4 行（手机屏幕约 4 行可见），超过必须拆段
+- 用 `##` 和 `###` 做标题，不用 `####`（手机上层级太深看不清）
+- 表格不超过 4 列，宽表格拆成多个小表格或改用列表
+- 代码块不超过 15 行，超过用 `...` 省略
+- ASCII 图表转为简短文字描述或列表（手机上 ASCII 会错位）
+
+### 内容规则
+- 每篇开头加 `💡 一句话总结`，让读者 3 秒知道讲什么
+- 长句拆短句，一个从句不超过 2 个逗号
+- 专业术语首次出现时用括号简短解释
+- 去掉内部黑话，改用通用表述
+- 适当用 emoji 做视觉分隔（📌 💡 ⚠️ ✅），但不过度
+- 长列表项不超过 2 行
+
+### 结构规则
+- 去掉双语标题（如 "Summary 概要"），直接用中文
+- 去掉编号前缀（"1." "2." "3.1" 等），用自然的标题
+- 开头加"背景"引入段
+- 结尾加 `✅ 总结` 段落，提炼 2-3 个核心观点
+
+### 去晦涩规则
+- 去掉所有 `[[E1]]` `[[E2]]` 等证据引用标记
+- 保留数据但加白话解释
+- 保留所有技术数据和分析，只改表达方式
+
+## 发布流程
+
+1. **克隆源码**: `git clone https://lanky228:<token>@github.com/lanky228/hexo.git /root/workspace/hexo-blog`
+2. **复制文章**: 将 `.md` 文件复制到 `source/_posts/`
+3. **设置 Git 配置**: `git config user.name "liuzhengri" && git config user.email "1289206629@qq.com"`
+4. **提交并推送**: `git add . && git commit -m "publish: <title>" && git push origin master`
+5. **构建并部署**: `cd /root/workspace/hexo-blog && npx hexo clean && npx hexo generate && npx hexo deploy`
+6. **验证**: 检查 `lanky228.github.io` 仓库最新提交
+
+## Front Matter 格式
+
+```yaml
+---
+title: 文章标题
+date: 2026-07-28 10:00:00
+tags: AI
+categories: 学习
+---
+```
+
+## 部署配置注意事项
+
+- `_config.yml` 的 deploy 段使用 SSH 格式，需临时改为 HTTPS+token 格式
+- 部署完成后必须恢复原始 `_config.yml`
+- 必须先运行 `npm install`（首次）
+- `hexo deploy` 是独立步骤，git push 源码不会更新线上博客
