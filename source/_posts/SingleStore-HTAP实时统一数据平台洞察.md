@@ -1,7 +1,8 @@
 ---
 title: SingleStore HTAP实时统一数据平台洞察——事务+分析一体化查询与AI实时推理
 date: 2026-07-16 13:00:00
-tags: AI
+tags: [SingleStore, HTAP, 实时分析, 向量搜索, 数据库]
+description: SingleStore用一个引擎同时跑事务、分析和向量搜索，电信场景验证6-100倍查询加速。
 categories: 学习
 ---
 
@@ -153,6 +154,20 @@ SingleStore Kai 提供 MongoDB 协议兼容 API，MongoDB 应用无需改代码�
 - 使用场景包括网络健康实时查询和基站故障工单系统
 - 5G 带来数据量 20 倍增长，Oracle RAC 无法横向扩展是替换根本动机
 - 预期 5G 落地后 KPI 数量将增至 9 万
+
+## 常见问题
+
+**Q: HTAP是什么?**
+
+A: HTAP（混合事务分析处理）指一个数据库同时承载事务和分析负载。SingleStore在单一表存储内同时支持列存扫描性能与行存点查性能，数据无需在不同布局间复制。
+
+**Q: SingleStore的统一引擎怎么工作?**
+
+A: 采用"列存为体、行存为缓存"的Universal Storage。内存行存承载最近写入与点查，磁盘列存承载分析与历史数据，三层存储实现冷热分层。
+
+**Q: 向量搜索和OLAP能合一吗?**
+
+A: 可以。SingleStore通过Top()算子下推，将top-k向量搜索作为filter接入SQL流水线。一条SQL内同时执行向量相似、BM25全文匹配、JSON提取、聚合与JOIN。
 
 ## 总结
 

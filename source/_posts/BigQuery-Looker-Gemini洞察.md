@@ -1,7 +1,8 @@
 ---
 title: BigQuery-Looker-Gemini洞察
 date: 2026-07-15 11:00:00
-tags: AI
+tags: [BigQuery, Looker, LookML, 语义层, Gemini]
+description: LookML运行14年最成熟的语义建模语言，Gemini用AI生成语义查询加确定性编译SQL把准确率从80%提升到97%。
 categories: 学习
 ---
 
@@ -228,6 +229,20 @@ Conversational Analytics 于 2026 年 7 月正式发布，是聊天式数据代�
 - **阶段二**：事前方言感知 + 语义查询中间表示——AI 生成结构化 JSON，确定性编译器生成各库 SQL，SQL 转换降级为兜底
 - **阶段三**：反馈学习 + 准确率闭环——已验证查询自动收集，准确率回归测试，对称聚合保护，Schema drift 检测上线
 - **阶段四**：生态标准跟踪——Ossie 标准跟踪，语义模型格式与开放标准对齐评估
+
+## 常见问题
+
+**Q: LookML是什么？**
+
+A: 2012 年发布的代码优先、版本控制的语义建模语言，编码维度、度量、JOIN 路径、访问权限、格式化、钻取。14 年生产验证，是业界运行时间最长的语义建模语言，比 Snowflake Semantic Views 早 13 年。
+
+**Q: Gemini怎么提升SQL准确率？**
+
+A: 关键是"让 AI 不直接写 SQL"。NL2LookML 路径中 Gemini 只生成 JSON 语义查询（字段+过滤器），由 Looker 确定性编译为目标 SQL。AI 不确定性被限制在语义理解阶段，SQL 生成是确定性编译，准确率从 80% 提升到 97%。
+
+**Q: Looker的语义层有什么优势？**
+
+A: 多数据库连接与方言生成是核心优势——单个项目可跨 BigQuery/Snowflake/Redshift/AlloyDB/Databricks 查询，同一套语义模型生成不同方言 SQL。独立于执行引擎，比 Snowflake 编译器内改写更可移植。
 
 ## 总结
 

@@ -1,7 +1,8 @@
 ---
 title: ClickHouse列式OLAP数据库洞察——极致查询性能背后的技术架构与StarRocks竞品对比
 date: 2026-07-16 09:00:00
-tags: AI
+tags: [ClickHouse, OLAP, 列式存储, 数据库选型, StarRocks]
+description: ClickHouse靠列式存储、向量化执行和稀疏索引做到百毫秒级聚合查询，但多表JOIN是短板。含vs StarRocks选型建议。
 categories: 学习
 ---
 
@@ -200,6 +201,17 @@ ClickHouse Cloud 采用"共享存储 + 存算分离"架构：
 
 - **西班牙 Grupo Masmovil**：用 ClickHouse 监控 RAN 网络，存储节省 16 倍、资源消耗降低 10 倍、数据延迟从 3 小时降至 15 分钟
 - **德国 BENOCS**：为全球头部电信运营商提供网络流量监控，依赖稀疏索引和时间序列邻近匹配
+
+## FAQ
+
+**Q: ClickHouse和StarRocks怎么选？**
+A: 场景以多表关联为主选 StarRocks，SSB 快 1.87 倍，TPC-H 场景 ClickHouse 无法完成基准。场景以单表时序扫描聚合为主选 ClickHouse，ClickBench 胜出。两者都已具备存算分离能力，无需为此更换引擎。
+
+**Q: ClickHouse 为什么 JOIN 慢？**
+A: 架构根因是没有全局查询计划，分布式查询靠下推到本地表再合并结果，且无成熟的基于代价的优化器。25.9 版引入首个全局 JOIN 重排序（1450 倍加速），但仍需手动建统计信息，outer join 和子查询覆盖有限。
+
+**Q: ClickHouse 适合什么场景？**
+A: 适合单表聚合查询（百毫秒级）、时序数据扫描、PB 级云 OLAP。电信行业有典型应用：西班牙 Grupo Masmovil 存储节省 16 倍，德国 BENOCS 做网络流量监控。
 
 ## 总结
 

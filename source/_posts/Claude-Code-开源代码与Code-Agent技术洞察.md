@@ -1,7 +1,8 @@
 ---
 title: Claude Code 开源代码与 Code Agent 技术洞察
 date: 2026-07-16 14:00:00
-tags: AI
+tags: [Claude Code, Code Agent, AI编程, Anthropic, MCP]
+description: Claude Code以1730行异步生成器为核心agentic loop，40+自描述工具，四层上下文压缩，开源Code Agent工程化程度最高。
 categories: 学习
 ---
 
@@ -233,6 +234,20 @@ Code Agent 的可靠性来自"规划-执行-验证"闭环。Claude Code 的循�
 - 建设 AI 工具中台——以 MCP 协议为底座，将内部研发工具封装为 MCP server
 - 查询服务的 agent 化可参考 query() loop 骨架
 - 培养自身的"agent 框架工程化"能力——这是与模型能力正交的竞争力
+
+## 常见问题
+
+**Q: Claude Code的架构核心是什么？**
+
+A: 一个名为 `query()` 的异步生成器函数，约 1730 行，承载全部 agentic loop 逻辑。用 AsyncGenerator 而非回调，天然获得背压、清洁取消、类型化终止三项能力。10 种终止状态、7 个恢复位点形成可测试的状态机。
+
+**Q: Code Agent怎么管理上下文？**
+
+A: 三层压缩级联：Layer 1 工具结果裁剪回收 40-60% 上下文；Layer 2 缓存前缀保留裁剪保留 prompt cache 前缀享缓存价；Layer 3 在 83.5% 填充时生成 9 段结构化摘要。关键是预退化阈值而非硬限制，70% 触发压缩。
+
+**Q: MCP协议是什么？**
+
+A: Model Context Protocol，Anthropic 于 2024-11-25 开源的协议标准，借鉴 LSP 思路。为 LLM 应用与外部数据源/工具提供统一集成方式，采用 JSON-RPC 2.0 和 Client-Host-Server 三方架构，已被 Claude、ChatGPT、VS Code、Cursor 等广泛采纳。
 
 ## 总结
 

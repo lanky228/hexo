@@ -1,7 +1,8 @@
 ---
 title: Databricks-AI-BI洞察
 date: 2026-07-15 12:00:00
-tags: AI
+tags: [Databricks, AI/BI, 湖仓, Unity Catalog, Delta Lake]
+description: Databricks用AI/BI Genie加Unity Catalog加Delta Lake UniForm构成湖仓一体AI查询方案，开源语义层与Snowflake差异化对比。
 categories: 学习
 ---
 
@@ -235,6 +236,17 @@ measures:
 - **阶段二**：事前方言感知——AI 感知目标引擎直接生成该库 SQL，SQL 转换降级为兜底
 - **阶段三**：准确率与反馈闭环——门槛设定，正面反馈→建议新 SQL，多模型选优
 - **阶段四**：开放生态对接——Polaris 对接评估，Unity Catalog 治理参考，路线选型
+
+## FAQ
+
+**Q: Databricks AI/BI 是什么？**
+A: AI/BI Genie 是复合 AI 系统（Compound AI），用思维链推理：识别列→规划 SQL→组合查询。Agent Mode 用 Claude Sonnet 支持多步推理。反馈机制三级优先级：SQL 表达式>示例 SQL>文本指令。
+
+**Q: Unity Catalog 有什么用？**
+A: 它是统一治理层，提供三级命名空间和四种访问控制：GRANT/REVOKE、ABAC 标签策略、行列过滤/脱敏、工作区绑定。还提供自动列级血缘跨工作区聚合，核心已开源并捐赠 Linux 基金会。
+
+**Q: Delta Lake UniForm 是什么？**
+A: 异步生成 Iceberg 元数据，不重写数据文件，实现单份数据双格式（Delta+Iceberg）。Iceberg 客户端只读，写入仍走 Delta。与 Apache Polaris 对比，UniForm 是单向读，Polaris 是多引擎平等读写。
 
 ## 总结
 

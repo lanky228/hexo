@@ -1,7 +1,8 @@
 ---
 title: Apache Pinot实时OLAP洞察——Druid竞品对比与实时分析查询技术路线选型
 date: 2026-07-16 12:00:00
-tags: AI
+tags: [Apache Pinot, OLAP, 实时分析, Druid, Star-Tree]
+description: Apache Pinot靠Star-Tree预聚合和原生实时Upsert，用户面分析比Druid低2-7倍延迟。含技术路线选型建议。
 categories: 学习
 ---
 
@@ -138,6 +139,20 @@ LinkedIn InFlow 基于 Pinot 构建网络流量观测平台：
 ✅ Pinot 的 Star-Tree 思路值得借鉴，但不需要引入 Pinot。可在 Druid 侧验证等效预聚合路径（Roll-up 与原始行双写、或物化视图）。
 
 ✅ Druid 段 handoff 30-90s 延迟是结构性约束。若"最近 10 秒"类查询不满足，应优先调优 Druid 实时段参数，而非迁移到 Pinot。
+
+## 常见问题
+
+**Q: Pinot和Druid怎么选？**
+
+A: 核心场景是时序数据实时摄入与查询时，Druid 的 Roll-up、HLL/Theta sketch、段模型在"高聚合度时序 + 长保留 + 高并发扫描"结构性占优。有强逐行 Upsert 或"明细下钻 + 聚合加速同表"需求时选 Pinot。
+
+**Q: Star-Tree索引是什么？**
+
+A: Pinot 在多列上构建的预聚合索引。与 Druid 摄入时破坏性 Roll-up 不同，Star-Tree 是索引层预聚合，原始行保留，同一张表可同时支持聚合加速和明细下钻，查询命中预聚合文档时提供硬延迟上界。
+
+**Q: Pinot支持Upsert吗？**
+
+A: 自 0.6.x 起支持基于主键的原生实时 Upsert，是首个支持实时 Upsert 的实时 OLAP 系统。Druid 缺乏真正的逐行 Upsert，仅支持段级覆盖，对迟到事件、数据修正、去重场景 Pinot 有结构性优势。
 
 ## 总结
 

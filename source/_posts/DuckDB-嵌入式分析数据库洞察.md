@@ -1,7 +1,8 @@
 ---
 title: DuckDB嵌入式分析数据库洞察——轻量级OLAP的AI原生查询与边缘场景适配
 date: 2026-07-16 10:00:00
-tags: AI
+tags: [DuckDB, 嵌入式数据库, OLAP, SQLite, 边缘计算]
+description: DuckDB是分析界SQLite，无需独立服务进程直接嵌入应用运行，适合边缘设备轻量分析和AI查询场景。
 categories: 学习
 ---
 
@@ -150,6 +151,17 @@ GizmoEdge 将 DuckDB 作为执行引擎，协调 K8s 集群、Linux 节点甚至
 📌 核心结论：DuckDB 与现有分析引擎不构成替代关系，而是互补。DuckDB 填补了边缘设备和浏览器场景的能力空白，但单进程边界使其无法承担中重型负载。
 
 应将 DuckDB 定位为边缘分析层，与中心化引擎构成"边缘-中心"分层架构。
+
+## FAQ
+
+**Q: DuckDB 是什么？**
+A: "分析界 SQLite"，进程内嵌入式 OLAP 数据库。无服务进程、零外部依赖、可编译为单文件。采用列式存储+向量化执行（Push-Based，单批 2048 行）。2026 年 4 月 OLAP 综合评测 8.9/10 排名第二，仅次于 ClickHouse。
+
+**Q: DuckDB 和 SQLite 什么关系？**
+A: 理念一脉相承（嵌入式、单文件、零依赖），但目标负载不同：SQLite 面向 OLTP（事务处理），DuckDB 面向 OLAP（分析处理）。SQLite 逐行处理，DuckDB 列式向量化执行，适合聚合分析查询。
+
+**Q: DuckDB 适合什么场景？**
+A: 适合边缘设备轻量分析（内存可低至 512MB）、浏览器分析（DuckDB-Wasm）、AI Agent 查询工具（已被 LangChain/LlamaIndex 采纳）。不适合中重型负载——单进程、16 并发退化 41%、无节点扩展。
 
 ## 总结
 

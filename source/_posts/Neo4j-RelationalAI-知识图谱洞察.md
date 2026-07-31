@@ -1,7 +1,8 @@
 ---
 title: Neo4j / RelationalAI 知识图谱与本体查询洞察
 date: 2026-07-15 14:00:00
-tags: AI
+tags: [Neo4j, 知识图谱, 图数据库, RelationalAI, Cypher]
+description: 图查询在多跳遍历场景远胜SQL，Neo4j和RelationalAI代表两条不同技术路线。聚合分析应留在SQL引擎。
 categories: 学习
 ---
 
@@ -268,6 +269,20 @@ RDF/SPARQL 与属性图是两种不同的图数据模型：
 - GraphRAG 在网络运维知识库中的应用评估
 - GQL 标准跟踪，评估统一查询服务是否纳入 GQL 接口
 - RDF/OWL 本体标准跟踪（行业标准资源模型对接）
+
+## 常见问题
+
+**Q: 图查询比SQL好在哪?**
+
+A: 多跳遍历场景下，Neo4j基于索引无关邻接，遍历代价线性增长；SQL的递归CTE在3-4跳后性能急剧退化，JOIN代价随深度指数增长。
+
+**Q: Neo4j和RelationalAI怎么选?**
+
+A: Neo4j提供最完整的图查询能力（Cypher+GDS+GraphRAG），但需独立数据库和ETL同步。RelationalAI以Snowflake Native App部署，数据不离开安全边界，运维开销最低。
+
+**Q: 什么时候该用图数据库?**
+
+A: 3跳以内SQL JOIN足够；3+跳的拓扑发现、路径发现、模式匹配场景图数据库优势显现。聚合查询仍应留在SQL引擎，图查询是补充而非替代。
 
 ## 总结
 

@@ -1,7 +1,8 @@
 ---
 title: Iceberg-Trino-开源湖仓查询洞察
 date: 2026-07-16 11:00:00
-tags: AI
+tags: [Apache Iceberg, Trino, 湖仓, Polaris, 开源]
+description: Iceberg加Trino加Polaris构成开源湖仓三件套，Trino查询比StarRocks慢约5倍，价值在标准对接而非替换执行引擎。
 categories: 学习
 ---
 
@@ -195,6 +196,20 @@ Trino Iceberg 连接器支持多种目录类型（hive_metastore、glue、jdbc�
 - **阶段二**：开放目录对接——StarRocks + Polaris 验证，建立"一份数据 + 一个目录 + 多引擎"拓扑
 - **阶段三**：联邦方案选型——Trino 连接器 vs SQL 转换对比验证
 - **阶段四**：跨源与语义层——评估 Trino 跨源 JOIN 替代方案
+
+## 常见问题
+
+**Q: Trino为什么比StarRocks慢?**
+
+A: 多组基准显示，TPC-DS 1TB Iceberg上StarRocks较Trino快5.54倍。StarRocks在执行层优化更深（向量化、CBO），Trino的优势在跨源联邦查询而非单引擎性能。
+
+**Q: 开源湖仓三件套是什么?**
+
+A: Apache Iceberg（开放表格式）+ Trino（开放查询引擎）+ Apache Polaris（开放目录服务）。三者解耦组合，形成存算分离、多引擎共享一份数据的湖仓架构。
+
+**Q: Polaris是什么?**
+
+A: Iceberg REST Catalog规范的100%开源实现，由Dremio和Snowflake创建并捐赠给Apache基金会。2026年2月毕业为顶级项目，提供厂商中立的目录、RBAC和临时凭证下发能力。
 
 ## 总结
 

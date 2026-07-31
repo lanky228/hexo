@@ -1,7 +1,8 @@
 ---
 title: dbt Semantic Layer / Cube 开源语义层洞察
 date: 2026-07-15 13:00:00
-tags: AI
+tags: [dbt, Cube, 语义层, MCP, 数据建模]
+description: dbt Semantic Layer和Cube是两个开源语义层方案，Cube在多仓库覆盖和架构独立性上更优。两者均支持MCP Server。
 categories: 学习
 ---
 
@@ -237,6 +238,17 @@ GitHub Stars（2026-07-11）：Cube 20,381；MetricFlow 1,677；dbt-mcp 589；ap
 - 如果 Cube + StarRocks + Druid PoC 通过，考虑将 Cube 作为统一 SQL 查询服务的语义层组件，替代或补充 SQL 方言转换链路。
 - 评估 Cube MCP Server 作为 AI Agent 语义层接口的可行性：AI Agent 先通过 Meta API 发现模型，再生成 Semantic SQL，由 Cube 编译为各仓库方言。
 - 保留 GaussDB 的现有改写路径作为兜底。如果 Cube + GaussDB 验证不通过，GaussDB 查询仍走现有链路。
+
+## FAQ
+
+**Q: dbt Semantic Layer 是什么？**
+A: 2024-10 GA，2025 年将 MetricFlow 核心开源。四层架构：MetricFlow（指标编译引擎，开源）、Semantic Interfaces（YAML 语义模型，开源）、Service Layer（dbt Cloud 专有）、APIs（JDBC/GraphQL/CLI/MCP）。优势是语义模型与 dbt 转换同源，消除定义漂移。
+
+**Q: Cube 和 dbt 怎么选？**
+A: 已有独立 SQL 生成链路选 Cube，无头独立可插入现有架构，Semantic SQL 迁移成本低。已用 dbt 做转换选 dbt SL，语义模型与转换同源。多仓库覆盖 Cube（20+ 源含 Druid）> dbt SL（6 个）。Cube Core 全开源可自托管，dbt SL 需订阅。
+
+**Q: 语义层支持 MCP 吗？**
+A: 两者均提供 MCP Server。dbt 提供 8 个工具集（list_metrics、query_metrics 等），AI 先发现指标再查询。Cube 提供 Semantic SQL+Meta API+MCP Server，AI 写含 MEASURE() 的 Semantic SQL。这代表语义层从 BI 消费向 AI 消费扩展。
 
 ## 总结
 
