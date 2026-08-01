@@ -5,6 +5,13 @@ tags: [BigQuery, Looker, LookML, 语义层, Gemini]
 description: LookML运行14年最成熟的语义建模语言，Gemini用AI生成语义查询加确定性编译SQL把准确率从80%提升到97%。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+LookML运行14年最成熟的语义建模语言，Gemini用AI生成语义查询加确定性编译SQL把准确率从80%提升到97%。
+
+</details>
+
 
 # BigQuery + Looker 语义层与 Gemini AI 洞察
 
@@ -229,6 +236,18 @@ Conversational Analytics 于 2026 年 7 月正式发布，是聊天式数据代�
 - **阶段二**：事前方言感知 + 语义查询中间表示——AI 生成结构化 JSON，确定性编译器生成各库 SQL，SQL 转换降级为兜底
 - **阶段三**：反馈学习 + 准确率闭环——已验证查询自动收集，准确率回归测试，对称聚合保护，Schema drift 检测上线
 - **阶段四**：生态标准跟踪——Ossie 标准跟踪，语义模型格式与开放标准对齐评估
+
+## 参考链接
+
+- [BigQuery官方文档](https://cloud.google.com/bigquery/docs/)
+- [BigQuery Wikipedia](https://en.wikipedia.org/wiki/BigQuery)
+- [Looker官方文档](https://cloud.google.com/looker/docs/)
+- [LookML文档](https://cloud.google.com/looker/docs/lookml-basics)
+- [Google Gemini](https://deepmind.google/technologies/gemini/)
+- [Apache Iceberg官方文档](https://iceberg.apache.org/docs/latest/)
+- [Iceberg表格式规范](https://iceberg.apache.org/spec/)
+- [Apache Iceberg Wikipedia](https://en.wikipedia.org/wiki/Apache_Iceberg)
+
 
 ## 常见问题
 

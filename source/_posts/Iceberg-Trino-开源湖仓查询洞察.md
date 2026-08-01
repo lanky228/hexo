@@ -5,6 +5,13 @@ tags: [Apache Iceberg, Trino, 湖仓, Polaris, 开源]
 description: Iceberg加Trino加Polaris构成开源湖仓三件套，Trino查询比StarRocks慢约5倍，价值在标准对接而非替换执行引擎。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+Iceberg加Trino加Polaris构成开源湖仓三件套，Trino查询比StarRocks慢约5倍，价值在标准对接而非替换执行引擎。
+
+</details>
+
 
 # Apache Iceberg + Trino：开源湖仓查询洞察
 
@@ -196,6 +203,18 @@ Trino Iceberg 连接器支持多种目录类型（hive_metastore、glue、jdbc�
 - **阶段二**：开放目录对接——StarRocks + Polaris 验证，建立"一份数据 + 一个目录 + 多引擎"拓扑
 - **阶段三**：联邦方案选型——Trino 连接器 vs SQL 转换对比验证
 - **阶段四**：跨源与语义层——评估 Trino 跨源 JOIN 替代方案
+
+## 参考链接
+
+- [Apache Iceberg官方文档](https://iceberg.apache.org/docs/latest/)
+- [Iceberg表格式规范](https://iceberg.apache.org/spec/)
+- [Apache Iceberg Wikipedia](https://en.wikipedia.org/wiki/Apache_Iceberg)
+- [Trino官方文档](https://trino.io/docs/current/)
+- [Trino Wikipedia](https://en.wikipedia.org/wiki/Trino_(SQL_query_engine))
+- [Presto到Trino的历史](https://trino.io/blog/2020/12/27/announcing-trino.html)
+- [Apache Polaris文档](https://polaris.apache.org/)
+- [ClickHouse官方文档](https://clickhouse.com/docs/en/)
+
 
 ## 常见问题
 

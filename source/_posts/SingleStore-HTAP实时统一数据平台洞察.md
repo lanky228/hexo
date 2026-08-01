@@ -5,6 +5,13 @@ tags: [SingleStore, HTAP, 实时分析, 向量搜索, 数据库]
 description: SingleStore用一个引擎同时跑事务、分析和向量搜索，电信场景验证6-100倍查询加速。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+SingleStore用一个引擎同时跑事务、分析和向量搜索，电信场景验证6-100倍查询加速。
+
+</details>
+
 
 ## 一句话总结
 
@@ -154,6 +161,17 @@ SingleStore Kai 提供 MongoDB 协议兼容 API，MongoDB 应用无需改代码�
 - 使用场景包括网络健康实时查询和基站故障工单系统
 - 5G 带来数据量 20 倍增长，Oracle RAC 无法横向扩展是替换根本动机
 - 预期 5G 落地后 KPI 数量将增至 9 万
+
+## 参考链接
+
+- [SingleStore官方文档](https://docs.singlestore.com/)
+- [SingleStore Wikipedia](https://en.wikipedia.org/wiki/SingleStore)
+- [HTAP Wikipedia](https://en.wikipedia.org/wiki/Hybrid_transactional/analytical_processing_(HTAP))
+- [StarRocks官方文档](https://docs.starrocks.io/)
+- [StarRocks GitHub](https://github.com/StarRocks/starrocks)
+- [StarRocks Wikipedia](https://en.wikipedia.org/wiki/StarRocks)
+- [向量化执行 Wikipedia](https://en.wikipedia.org/wiki/Vectorization_(computing))
+
 
 ## 常见问题
 

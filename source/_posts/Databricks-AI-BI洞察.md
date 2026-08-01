@@ -5,6 +5,13 @@ tags: [Databricks, AI/BI, 湖仓, Unity Catalog, Delta Lake]
 description: Databricks用AI/BI Genie加Unity Catalog加Delta Lake UniForm构成湖仓一体AI查询方案，开源语义层与Snowflake差异化对比。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+Databricks用AI/BI Genie加Unity Catalog加Delta Lake UniForm构成湖仓一体AI查询方案，开源语义层与Snowflake差异化对比。
+
+</details>
+
 
 # Databricks AI/BI 洞察
 
@@ -236,6 +243,18 @@ measures:
 - **阶段二**：事前方言感知——AI 感知目标引擎直接生成该库 SQL，SQL 转换降级为兜底
 - **阶段三**：准确率与反馈闭环——门槛设定，正面反馈→建议新 SQL，多模型选优
 - **阶段四**：开放生态对接——Polaris 对接评估，Unity Catalog 治理参考，路线选型
+
+## 参考链接
+
+- [Databricks官方文档](https://docs.databricks.com/)
+- [Lakehouse架构论文](https://www.cidrdb.org/cidr2021/papers/cidr2021_p17.pdf)
+- [Databricks Wikipedia](https://en.wikipedia.org/wiki/Databricks)
+- [Delta Lake官方文档](https://docs.delta.io/)
+- [Delta Lake论文](https://databricks.com/wp-content/uploads/2020/08/p975-armbrust.pdf)
+- [Unity Catalog文档](https://docs.databricks.com/data-governance/unity-catalog/index.html)
+- [Apache Iceberg官方文档](https://iceberg.apache.org/docs/latest/)
+- [Iceberg表格式规范](https://iceberg.apache.org/spec/)
+
 
 ## FAQ
 

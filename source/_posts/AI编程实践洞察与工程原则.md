@@ -5,6 +5,13 @@ tags: [AI编程, Code Agent, 差分测试, 软件工程]
 description: AI生成代码的信任问题不是能不能看懂而是怎么证明它对了。差分测试、规格驱动、确定性护栏等方法论的ROI分析。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+AI生成代码的信任问题不是能不能看懂而是怎么证明它对了。差分测试、规格驱动、确定性护栏等方法论的ROI分析。
+
+</details>
+
 
 ## 一句话总结
 
@@ -178,6 +185,13 @@ Google reviewer 的三个聚焦点是 correctness（正确性）、maintainabili
 **防护**：修复一个 bug 后，搜索所有同类调用模式。使用"抽象阶梯"：精确匹配 → 变量抽象 → 结构抽象 → 语义抽象。搜索整个代码库，不只是出 bug 的模块。
 
 > AI Agent 不会举一反三——你修了 `pause()` 的问题，它不会想到 `setSpeed()` 也有同样的问题。这个"从一到多"的泛化必须由人类驱动，业界叫"变体分析"。
+
+## 参考链接
+
+- [Snowflake官方文档](https://docs.snowflake.com/)
+- [Snowflake Wikipedia](https://en.wikipedia.org/wiki/Snowflake_Inc.)
+- [Snowflake架构白皮书](https://www.snowflake.com/wp-content/uploads/2022/04/Snowflake-Cloud-Data-Platform-Architecture.pdf)
+
 
 ## 常见问题
 

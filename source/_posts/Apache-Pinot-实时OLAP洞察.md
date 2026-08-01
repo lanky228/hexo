@@ -5,6 +5,13 @@ tags: [Apache Pinot, OLAP, 实时分析, Druid, Star-Tree]
 description: Apache Pinot靠Star-Tree预聚合和原生实时Upsert，用户面分析比Druid低2-7倍延迟。含技术路线选型建议。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+Apache Pinot靠Star-Tree预聚合和原生实时Upsert，用户面分析比Druid低2-7倍延迟。含技术路线选型建议。
+
+</details>
+
 
 ## 一句话总结
 
@@ -139,6 +146,13 @@ LinkedIn InFlow 基于 Pinot 构建网络流量观测平台：
 ✅ Pinot 的 Star-Tree 思路值得借鉴，但不需要引入 Pinot。可在 Druid 侧验证等效预聚合路径（Roll-up 与原始行双写、或物化视图）。
 
 ✅ Druid 段 handoff 30-90s 延迟是结构性约束。若"最近 10 秒"类查询不满足，应优先调优 Druid 实时段参数，而非迁移到 Pinot。
+
+## 参考链接
+
+- [Apache Pinot官方文档](https://docs.pinot.apache.org/)
+- [Apache Pinot GitHub](https://github.com/apache/pinot)
+- [Apache Druid文档](https://druid.apache.org/docs/)
+
 
 ## 常见问题
 

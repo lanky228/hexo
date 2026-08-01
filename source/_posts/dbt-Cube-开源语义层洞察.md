@@ -5,6 +5,13 @@ tags: [dbt, Cube, 语义层, MCP, 数据建模]
 description: dbt Semantic Layer和Cube是两个开源语义层方案，Cube在多仓库覆盖和架构独立性上更优。两者均支持MCP Server。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+dbt Semantic Layer和Cube是两个开源语义层方案，Cube在多仓库覆盖和架构独立性上更优。两者均支持MCP Server。
+
+</details>
+
 
 ## 一句话总结
 
@@ -238,6 +245,18 @@ GitHub Stars（2026-07-11）：Cube 20,381；MetricFlow 1,677；dbt-mcp 589；ap
 - 如果 Cube + StarRocks + Druid PoC 通过，考虑将 Cube 作为统一 SQL 查询服务的语义层组件，替代或补充 SQL 方言转换链路。
 - 评估 Cube MCP Server 作为 AI Agent 语义层接口的可行性：AI Agent 先通过 Meta API 发现模型，再生成 Semantic SQL，由 Cube 编译为各仓库方言。
 - 保留 GaussDB 的现有改写路径作为兜底。如果 Cube + GaussDB 验证不通过，GaussDB 查询仍走现有链路。
+
+## 参考链接
+
+- [Model Context Protocol规范](https://modelcontextprotocol.io/)
+- [MCP GitHub](https://github.com/modelcontextprotocol)
+- [dbt官方文档](https://docs.getdbt.com/)
+- [dbt GitHub](https://github.com/dbt-labs/dbt-core)
+- [Cube官方文档](https://cube.dev/docs/)
+- [Cube GitHub](https://github.com/cube-js/cube)
+- [Snowflake官方文档](https://docs.snowflake.com/)
+- [Snowflake Wikipedia](https://en.wikipedia.org/wiki/Snowflake_Inc.)
+
 
 ## FAQ
 

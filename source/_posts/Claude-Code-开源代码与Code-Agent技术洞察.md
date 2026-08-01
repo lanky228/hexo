@@ -5,6 +5,13 @@ tags: [Claude Code, Code Agent, AI编程, Anthropic, MCP]
 description: Claude Code以1730行异步生成器为核心agentic loop，40+自描述工具，四层上下文压缩，开源Code Agent工程化程度最高。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+Claude Code以1730行异步生成器为核心agentic loop，40+自描述工具，四层上下文压缩，开源Code Agent工程化程度最高。
+
+</details>
+
 
 ## 一句话总结
 
@@ -234,6 +241,14 @@ Code Agent 的可靠性来自"规划-执行-验证"闭环。Claude Code 的循�
 - 建设 AI 工具中台——以 MCP 协议为底座，将内部研发工具封装为 MCP server
 - 查询服务的 agent 化可参考 query() loop 骨架
 - 培养自身的"agent 框架工程化"能力——这是与模型能力正交的竞争力
+
+## 参考链接
+
+- [Claude官方文档](https://docs.anthropic.com/)
+- [Anthropic官网](https://www.anthropic.com/)
+- [Model Context Protocol规范](https://modelcontextprotocol.io/)
+- [MCP GitHub](https://github.com/modelcontextprotocol)
+
 
 ## 常见问题
 

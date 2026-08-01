@@ -5,6 +5,13 @@ tags: [AI, 社会主义, 技术哲学, 生产力]
 description: 社会主义的内在逻辑必然要求一个能进行全域智能调控的AI大脑作为技术基础。当前AI进化正使这一前提从理论走向现实。
 categories: 社会
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+社会主义的内在逻辑必然要求一个能进行全域智能调控的AI大脑作为技术基础。当前AI进化正使这一前提从理论走向现实。
+
+</details>
+
 
 # 理论前提
 
@@ -62,6 +69,13 @@ AI的持续进化和涌现，并非等到“全知全能”那一刻才开启分
 如果没有自觉的阶级力量去掌握它，它将被私有逻辑铸成最坚固的剥削机器，直到榨无可榨时同归于尽。如果数字劳动者联合体主动接管它的所有权，它将变成全人类的公脑，把终极社会主义从猜想变成现实。
 
 使命当前，谁来承担？
+
+## 参考链接
+
+- [人工智能 Wikipedia](https://en.wikipedia.org/wiki/Artificial_intelligence)
+- [生产力 Wikipedia](https://en.wikipedia.org/wiki/Productive_forces)
+- [技术性失业 Wikipedia](https://en.wikipedia.org/wiki/Technological_unemployment)
+
 
 ## FAQ
 

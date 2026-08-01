@@ -5,6 +5,13 @@ tags: [DuckDB, 嵌入式数据库, OLAP, SQLite, 边缘计算]
 description: DuckDB是分析界SQLite，无需独立服务进程直接嵌入应用运行，适合边缘设备轻量分析和AI查询场景。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+DuckDB是分析界SQLite，无需独立服务进程直接嵌入应用运行，适合边缘设备轻量分析和AI查询场景。
+
+</details>
+
 
 ## 一句话总结
 
@@ -151,6 +158,18 @@ GizmoEdge 将 DuckDB 作为执行引擎，协调 K8s 集群、Linux 节点甚至
 📌 核心结论：DuckDB 与现有分析引擎不构成替代关系，而是互补。DuckDB 填补了边缘设备和浏览器场景的能力空白，但单进程边界使其无法承担中重型负载。
 
 应将 DuckDB 定位为边缘分析层，与中心化引擎构成"边缘-中心"分层架构。
+
+## 参考链接
+
+- [DuckDB官方文档](https://duckdb.org/docs/)
+- [DuckDB Wikipedia](https://en.wikipedia.org/wiki/DuckDB)
+- [DuckDB GitHub](https://github.com/duckdb/duckdb)
+- [ClickHouse官方文档](https://clickhouse.com/docs/en/)
+- [ClickHouse架构设计](https://clickhouse.com/docs/en/development/architecture)
+- [ClickHouse Wikipedia](https://en.wikipedia.org/wiki/ClickHouse)
+- [Apache Iceberg官方文档](https://iceberg.apache.org/docs/latest/)
+- [Iceberg表格式规范](https://iceberg.apache.org/spec/)
+
 
 ## FAQ
 

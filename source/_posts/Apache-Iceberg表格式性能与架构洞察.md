@@ -5,6 +5,13 @@ tags: [AI, 数据湖, Iceberg]
 categories: [学习]
 description: TPC-DS 实测：Iceberg 公平对比仅快 4.7%，核心价值在架构治理而非裸性能
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+TPC-DS 实测：Iceberg 公平对比仅快 4.7%，核心价值在架构治理而非裸性能
+
+</details>
+
 
 💡 **一句话总结**
 
@@ -252,6 +259,38 @@ HMS 是常驻 RPC 服务，元数据存于关系数据库，引擎通过 Thrift 
 3. **建议分层存储而非二选一。** 热数据/交互分析走 StarRocks 本地表保性能；冷数据/治理数据/跨引擎共享数据走 Iceberg 外表保开放性。StarRocks 已支持 Iceberg 外表查询，可实现混合架构。
 
 4. **不应期待 Iceberg 带来性能提升。** 实测数据明确表明，Iceberg 的价值在架构治理而非裸性能。引入依据应是"需要 Time Travel / Schema 演进 / 跨引擎表语义 / 消除 HMS 依赖"，而非"查询更快"。
+
+---
+
+## 参考链接
+
+- [Apache Iceberg官方文档](https://iceberg.apache.org/docs/latest/)
+- [Iceberg表格式规范](https://iceberg.apache.org/spec/)
+- [Apache Iceberg Wikipedia](https://en.wikipedia.org/wiki/Apache_Iceberg)
+- [Trino官方文档](https://trino.io/docs/current/)
+- [Trino Wikipedia](https://en.wikipedia.org/wiki/Trino_(SQL_query_engine))
+- [Presto到Trino的历史](https://trino.io/blog/2020/12/27/announcing-trino.html)
+- [DuckDB官方文档](https://duckdb.org/docs/)
+- [DuckDB Wikipedia](https://en.wikipedia.org/wiki/DuckDB)
+
+
+## 常见问题
+
+**Q: Iceberg 比 Parquet 快吗？**
+
+公平对比下（双方都分区），Iceberg 仅快 4.7%。所谓"+45.6%"的结论来自不对等对比——只有 Iceberg 用了分区。Iceberg 底层也是 Parquet，多了元数据层，在多表 JOIN 场景反而更慢。
+
+**Q: 既然性能没优势，为什么还要用 Iceberg？**
+
+性能从来不是 Iceberg 的卖点。它的价值在于：不依赖外部元数据服务（消除 HMS 单点故障）、Time Travel（历史数据可追溯）、Schema/分区无感演进、ACID 事务、跨引擎表语义统一。这些解决的是"数据能不能用得舒服"的问题，不是"跑得多快"。
+
+**Q: Iceberg、Delta Lake、Hudi 怎么选？**
+
+多引擎多云场景选 Iceberg（中立性最优，引擎覆盖最广）；以 Spark/Databricks 为核心选 Delta；流式 upsert 场景选 Hudi。若只引入一种，Iceberg 是最大公约数。
+
+**Q: 已经用了 StarRocks 本地表，还需要 Iceberg 吗？**
+
+建议分层存储而非二选一。热数据/交互分析走 StarRocks 本地表保性能，冷数据/治理数据/跨引擎共享数据走 Iceberg 外表保开放性。两者解决不同问题。
 
 ---
 

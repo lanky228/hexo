@@ -5,6 +5,13 @@ tags: [SQL, 联邦查询, 语义层, 方言转换, 多数据库]
 description: 跨库SQL适配有三条路线（联邦引擎、语义层、引擎统一），统一SQL加方言转换方案存在等价函数结构性风险。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+跨库SQL适配有三条路线（联邦引擎、语义层、引擎统一），统一SQL加方言转换方案存在等价函数结构性风险。
+
+</details>
+
 
 ## 一句话总结
 
@@ -111,6 +118,18 @@ AI 生成 SQL（只有一种方言，因为只有一个引擎），统一引擎�
 感知机制：语义层维护表-数据库路由映射（metrics 表 → StarRocks、alerts 表 → Druid）。AI 声明指标后，语义层追溯到底层表，查路由映射确定目标库，直接生成该库 SQL。
 
 业界验证：Netflix、Airbnb、Spotify 均已落地。OSI Initiative 40+ 公司参与，语义层正成为产业标准。
+
+## 参考链接
+
+- [Trino官方文档](https://trino.io/docs/current/)
+- [Trino Wikipedia](https://en.wikipedia.org/wiki/Trino_(SQL_query_engine))
+- [Presto到Trino的历史](https://trino.io/blog/2020/12/27/announcing-trino.html)
+- [StarRocks官方文档](https://docs.starrocks.io/)
+- [StarRocks GitHub](https://github.com/StarRocks/starrocks)
+- [StarRocks Wikipedia](https://en.wikipedia.org/wiki/StarRocks)
+- [dbt官方文档](https://docs.getdbt.com/)
+- [dbt GitHub](https://github.com/dbt-labs/dbt-core)
+
 
 ## FAQ
 

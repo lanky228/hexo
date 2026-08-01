@@ -5,6 +5,13 @@ tags: [政治经济学, 数字经济, 全民分红]
 description: 中国内需困局症结在公有制分配端缺管道，全民分红是数字时代公有制必须补上的制度履约。
 categories: 深度洞察
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+中国内需困局症结在公有制分配端缺管道，全民分红是数字时代公有制必须补上的制度履约。
+
+</details>
+
 
 ## 💡 一句话总结
 
@@ -69,6 +76,13 @@ Jones 与 Marinescu 用合成控制法对比阿拉斯加与其他州劳动市场
 **中期（3-10 年）**：参照阿拉斯加模式建立国家红利信托基金。国资利润、数据要素租金、AI 平台超额利润税统一注入，按人头定期无差别派发。立法锁定分配规则，使分红成为可预期的法定权益，而非政府的 discretionary 善意。
 
 **长期（10 年以上）**：将数据要素、AI 效率增益全面纳入"社会共同财富"核算。AI 大幅提升生产率时，红利不应全部转化为资本利润，而应通过基金自动缩短工时、提高法定分红比例。全民分红从"国资红利"扩展为"社会共同劳动收益"的全面兑现。
+
+## 参考链接
+
+- [全民基本收入 Wikipedia](https://en.wikipedia.org/wiki/Universal_basic_income)
+- [数字经济 Wikipedia](https://en.wikipedia.org/wiki/Digital_economy)
+- [自动化与就业 ILO报告](https://www.ilo.org/global/publications/books/WCMS_744019/lang--en/index.htm)
+
 
 ## FAQ
 

@@ -5,6 +5,13 @@ tags: [Snowflake, AI查询, 语义层, Text-to-SQL, 数据仓库]
 description: Snowflake用六阶段Agent流水线加原生语义层把text-to-SQL从51%提升到90%以上，语义模型驱动AI生成思路值得借鉴。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+Snowflake用六阶段Agent流水线加原生语义层把text-to-SQL从51%提升到90%以上，语义模型驱动AI生成思路值得借鉴。
+
+</details>
+
 
 # Snowflake AI 查询与语义层洞察
 
@@ -231,6 +238,18 @@ DDL 时校验的价值：语义模型错误在定义阶段暴露，而非运行�
 - **阶段二**：事前方言感知——语义模型增加 engine_capabilities，AI 感知目标引擎直接生成该库 SQL，SQL 转换降级为兜底
 - **阶段三**：反馈学习闭环——已验证查询自动收集，准确率回归测试自动化，多模型选优上线
 - **阶段四**：生态对接——Polaris 对接评估，Ossie 标准跟踪
+
+## 参考链接
+
+- [Snowflake官方文档](https://docs.snowflake.com/)
+- [Snowflake Wikipedia](https://en.wikipedia.org/wiki/Snowflake_Inc.)
+- [Snowflake架构白皮书](https://www.snowflake.com/wp-content/uploads/2022/04/Snowflake-Cloud-Data-Platform-Architecture.pdf)
+- [Apache Iceberg官方文档](https://iceberg.apache.org/docs/latest/)
+- [Iceberg表格式规范](https://iceberg.apache.org/spec/)
+- [Apache Iceberg Wikipedia](https://en.wikipedia.org/wiki/Apache_Iceberg)
+- [Trino官方文档](https://trino.io/docs/current/)
+- [Trino Wikipedia](https://en.wikipedia.org/wiki/Trino_(SQL_query_engine))
+
 
 ## 常见问题
 

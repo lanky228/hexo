@@ -5,6 +5,13 @@ tags: [Neo4j, 知识图谱, 图数据库, RelationalAI, Cypher]
 description: 图查询在多跳遍历场景远胜SQL，Neo4j和RelationalAI代表两条不同技术路线。聚合分析应留在SQL引擎。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+图查询在多跳遍历场景远胜SQL，Neo4j和RelationalAI代表两条不同技术路线。聚合分析应留在SQL引擎。
+
+</details>
+
 
 ## 一句话总结
 
@@ -269,6 +276,16 @@ RDF/SPARQL 与属性图是两种不同的图数据模型：
 - GraphRAG 在网络运维知识库中的应用评估
 - GQL 标准跟踪，评估统一查询服务是否纳入 GQL 接口
 - RDF/OWL 本体标准跟踪（行业标准资源模型对接）
+
+## 参考链接
+
+- [Neo4j官方文档](https://neo4j.com/docs/)
+- [Neo4j Wikipedia](https://en.wikipedia.org/wiki/Neo4j)
+- [Cypher查询语言](https://en.wikipedia.org/wiki/Cypher_(query_language))
+- [Snowflake官方文档](https://docs.snowflake.com/)
+- [Snowflake Wikipedia](https://en.wikipedia.org/wiki/Snowflake_Inc.)
+- [Snowflake架构白皮书](https://www.snowflake.com/wp-content/uploads/2022/04/Snowflake-Cloud-Data-Platform-Architecture.pdf)
+
 
 ## 常见问题
 

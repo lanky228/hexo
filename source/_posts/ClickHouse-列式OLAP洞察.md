@@ -5,6 +5,13 @@ tags: [ClickHouse, OLAP, 列式存储, 数据库选型, StarRocks]
 description: ClickHouse靠列式存储、向量化执行和稀疏索引做到百毫秒级聚合查询，但多表JOIN是短板。含vs StarRocks选型建议。
 categories: 学习
 ---
+<details>
+<summary>📝 AI 摘要</summary>
+
+ClickHouse靠列式存储、向量化执行和稀疏索引做到百毫秒级聚合查询，但多表JOIN是短板。含vs StarRocks选型建议。
+
+</details>
+
 
 ## 一句话总结
 
@@ -201,6 +208,18 @@ ClickHouse Cloud 采用"共享存储 + 存算分离"架构：
 
 - **西班牙 Grupo Masmovil**：用 ClickHouse 监控 RAN 网络，存储节省 16 倍、资源消耗降低 10 倍、数据延迟从 3 小时降至 15 分钟
 - **德国 BENOCS**：为全球头部电信运营商提供网络流量监控，依赖稀疏索引和时间序列邻近匹配
+
+## 参考链接
+
+- [ClickHouse官方文档](https://clickhouse.com/docs/en/)
+- [ClickHouse架构设计](https://clickhouse.com/docs/en/development/architecture)
+- [ClickHouse Wikipedia](https://en.wikipedia.org/wiki/ClickHouse)
+- [StarRocks官方文档](https://docs.starrocks.io/)
+- [StarRocks GitHub](https://github.com/StarRocks/starrocks)
+- [StarRocks Wikipedia](https://en.wikipedia.org/wiki/StarRocks)
+- [Apache Iceberg官方文档](https://iceberg.apache.org/docs/latest/)
+- [Iceberg表格式规范](https://iceberg.apache.org/spec/)
+
 
 ## FAQ
 
