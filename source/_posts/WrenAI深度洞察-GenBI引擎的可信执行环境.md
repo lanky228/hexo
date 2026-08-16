@@ -257,7 +257,7 @@ Chat2DB 适合开发者个人效率工具场景；WrenAI 适合企业级 GenBI �
 
 ### vs NLDB（产品线项目）
 
-产品线 NLDB 当前架构为线性流水线：`NLQueryService` 编排意图解析 → schema 加载 → SQL 生成（LLM）→ JDBC 执行 → 结果格式化。与 WrenAI 的对比凸显三个结构性差距：
+产品线 NLDB 当前架构为线性流水线：`NLQueryService` 编排意图解析 → schema 加载 → SQL 生成（LLM）→ JDBC 执行 → 结果格式化。与 WrenAI 的对比暴露三个结构性差距：
 
 | 维度 | NLDB（当前） | WrenAI |
 |------|-------------|--------|
@@ -301,11 +301,11 @@ WrenAI 采用 AGPL-3.0 许可证，对希望闭源分发产品的企业构成合
 
 **趋势一：语义层将成为 GenBI 的标配基座。** WrenAI、Cortex Analyst、Genie、Looker/LookML 的共同特征是"语义层 + AI"双轮驱动。纯 Text-to-SQL 路径在简单查询场景可用，但在企业级治理场景会被语义层方案替代。开源生态将形成"语义层 + AI 编译层"的分层竞争格局。
 
-**趋势二：Agent-native BI 是下一阶段竞争焦点。** WrenAI 已从"chat-first BI"转向"Agent-native GenBI"——让 Claude Code、Cursor、MCP 客户端等 Agent 通过 SDK 调用 WrenAI 能力，生成可部署的浏览器侧仪表盘（基于 wren-core-wasm）。这标志着 GenBI 从"人机对话"模式演进为"Agent 自主生成 + 部署"模式。
+**趋势二：Agent-native BI 是下一阶段竞争焦点。** WrenAI 已从"chat-first BI"转向"Agent-native GenBI"——让 Claude Code、Cursor、MCP 客户端等 Agent 通过 SDK 调用 WrenAI 能力，生成可部署的浏览器侧仪表盘（基于 wren-core-wasm）。这意味着 GenBI 从"人机对话"模式演进为"Agent 自主生成 + 部署"模式。
 
 **趋势三：确定性编译与 LLM 生成的职责分离将成为架构共识。** WrenAI 的"LLM 生成逻辑 SQL + DataFusion 编译物理 SQL"分离已被 Cortex Analyst 和 Genie 验证为有效模式。未来 Text-to-SQL 系统的架构将普遍采用"LLM 负责意图理解 + 确定性引擎负责物理展开"的分层设计，纯 LLM 端到端生成物理 SQL 的路径将被边缘化。
 
-**趋势四：多源异构支持是开源方案相对云锁定的核心差异化。** Cortex Analyst 锁定 Snowflake、Genie 锁定 Databricks、BigQuery Gemini 锁定 Google Cloud——商业方案天然绑定各自云生态。WrenAI 支持 22+ 数据源的开源方案，为多云/混合云企业提供了不绑定单一云厂商的 GenBI 路径。这一差异化在数据主权和数据重力日益受重视的背景下价值凸显。
+**趋势四：多源异构支持是开源方案相对云锁定的核心差异化。** Cortex Analyst 锁定 Snowflake、Genie 锁定 Databricks、BigQuery Gemini 锁定 Google Cloud——商业方案天然绑定各自云生态。WrenAI 支持 22+ 数据源的开源方案，为多云/混合云企业提供了不绑定单一云厂商的 GenBI 路径。这一差异化在数据主权和数据重力日益受重视的背景下格外突出。
 
 ## ✅ 总结
 

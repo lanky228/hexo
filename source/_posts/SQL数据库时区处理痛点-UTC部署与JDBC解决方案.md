@@ -97,11 +97,11 @@ StarRocks 官方文档明确列出了 time_zone 设置的影响范围。
 
 StarRocks 使用 MySQL 协议，客户端通常使用 MySQL Connector/J 连接。但 StarRocks 本身没有在 JDBC 连接字符串层面提供原生的 timezone 参数——不能在 URL 里加 `time_zone=Asia/Shanghai` 自动设置 session 时区。正确做法是连接后执行 `SET time_zone = 'xxx'`。
 
-值得注意的是，StarRocks 的 time_zone 变量有格式限制：只支持 UTC 偏移（如 `+08:00`）和时区名称（如 `Asia/Shanghai`）两种格式，不支持时区缩写（CST 除外，会自动转换为 Asia/Shanghai）。
+一个细节：StarRocks 的 time_zone 变量有格式限制，只支持 UTC 偏移（如 `+08:00`）和时区名称（如 `Asia/Shanghai`）两种格式，不支持时区缩写（CST 除外，会自动转换为 Asia/Shanghai）。
 
 社区 issue #38855 报告了一个更隐蔽的问题：通过 `SET_VAR` hint 设置时区时，`-5:00` 这种偏移格式会报错，只有完整的时区名称如 `America/Detroit` 才能工作——FE 和 BE 对时区格式的处理存在不一致。
 
-此外，StarRocks 在 JDBC Catalog（用于访问外部 JDBC 数据源）中曾有 URL 参数拼接 bug（PR #42947），导致用户在 jdbc_uri 中添加的参数被错误地放在数据库名后面。虽然已修复，但揭示了一个普遍问题：JDBC URL 参数的传递在不同场景下可能存在意外行为。
+另一个坑：StarRocks 在 JDBC Catalog（用于访问外部 JDBC 数据源）中曾有 URL 参数拼接 bug（PR #42947），导致用户在 jdbc_uri 中添加的参数被错误地放在数据库名后面。虽然已修复，但揭示了一个普遍问题：JDBC URL 参数的传递在不同场景下可能存在意外行为。
 
 ### 已知缺陷：硬编码时区
 

@@ -53,7 +53,7 @@ DataFusion 以 Apache Arrow 作为唯一内存格式，所有算子间数据流�
 - **SIMD 友好列式布局**：列数据连续存储，CPU 可对一批值做数据并行（SIMD 指令），编译器自动向量化
 - **不可变快照并行安全**：RecordBatch 一旦创建不可修改，任何转换产生新 RecordBatch，无需锁即可在多线程间共享
 
-与 DuckDB 的对比在此凸显：DuckDB 使用自研的 DataChunk（2048 元组）作为执行单元，与 Arrow 的互操作需要转换层。DataFusion 直接以 Arrow 为执行单元，对已存在于 Arrow 格式的数据零序列化成本。
+与 DuckDB 的对比在这里尤为清楚：DuckDB 使用自研的 DataChunk（2048 元组）作为执行单元，与 Arrow 的互操作需要转换层。DataFusion 直接以 Arrow 为执行单元，对已存在于 Arrow 格式的数据零序列化成本。
 
 ### 自建 SQL 解析器
 
