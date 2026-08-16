@@ -1,6 +1,6 @@
 # Hexo 博客项目 Agent 指南
 
-> 通用工作规则见 `person/workflow/management.md` "铁律"节。本文件仅列本仓库特有约束。
+> Hermes行为规则见 hermes-agent skill（`autonomous-ai-agents/hermes-agent/SKILL.md`）。本文件仅列本仓库特有约束。
 
 ## 项目信息
 
@@ -64,7 +64,7 @@ categories: 学习
 ### 核心要求
 - **所有博客重新打磨**，特别是早期简短博客
 - 重新洞察后发布，不是简单润色
-- 通用写作规则见 management.md 铁律8-9
+- 通用写作规则见 hermes-agent skill
 
 ### 手机阅读友好（已有规则继续执行）
 - 段落≤4行，标题用`##`/`###`
@@ -80,7 +80,7 @@ categories: 学习
 
 ## 持续进化机制
 
-> 通用规则见 management.md 铁律11。以下为本仓库特有：
+> Hermes行为规则见 hermes-agent skill。以下为本仓库特有：
 
 1. 博客重打磨完成 → 在BLOG-TASK.md标记状态
 2. 新增写作规范 → 追加到对应段落
